@@ -1,0 +1,308 @@
+/* Rincones favoritos de Mia - hoja de estilos */
+
+:root {
+  --bordo: #a8434c;
+  --bordo-oscuro: #7f333a;
+  --turquesa: #1f7480;
+  --turquesa-oscuro: #14515a;
+  --marron: #6b5642;
+  --crema: #f6efe2;
+  --blanco: #ffffff;
+  --texto: #333333;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--texto);
+  background-color: var(--crema);
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: var(--turquesa);
+}
+
+a:hover {
+  color: var(--bordo);
+}
+
+h1, h2, h3 {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  color: var(--bordo);
+  line-height: 1.2;
+  letter-spacing: 0.02em;
+}
+
+/* Encabezado */
+
+header {
+  background-color: var(--bordo);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1.5rem 1rem;
+}
+
+header h1 {
+  color: var(--blanco);
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header .autora {
+  margin: 0.4rem 0 0;
+  font-size: 0.95rem;
+  color: var(--crema);
+}
+
+/* Barra de navegación */
+
+nav {
+  background-color: var(--bordo-oscuro);
+  padding: 0.5rem 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 1rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  display: inline-block;
+  color: var(--crema);
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.95rem;
+}
+
+nav a:hover {
+  background-color: var(--turquesa);
+  color: var(--blanco);
+}
+
+nav a.activo {
+  background-color: var(--turquesa);
+  color: var(--blanco);
+  font-weight: 700;
+}
+
+/* Pie de página */
+
+footer {
+  background-color: var(--marron);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+footer a {
+  color: var(--blanco);
+}
+
+/* Estructura principal */
+
+main {
+  max-width: 60rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+.presentacion {
+  text-align: center;
+}
+
+.presentacion .texto {
+  border: 1px solid #dddddd;
+  padding: 1rem;
+  background-color: var(--blanco);
+  text-align: left;
+  max-width: 40rem;
+  margin: 0 auto 1.25rem;
+}
+
+.presentacion figure {
+  display: inline-block;
+  background-color: var(--blanco);
+  border: 1px solid #dddddd;
+  padding: 0.75rem;
+  margin: 1rem 0 0;
+  max-width: 18rem;
+}
+
+.presentacion img {
+  width: 100%;
+  display: block;
+}
+
+.presentacion figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--marron);
+}
+
+/* Grilla de rincones (CSS Grid) */
+
+.grilla-rincones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1.25rem;
+}
+
+.tarjeta {
+  border: 1px solid #cccccc;
+  text-align: center;
+  background-color: var(--blanco);
+  display: flex;
+  flex-direction: column;
+}
+
+.tarjeta img {
+  width: 100%;
+  height: 11rem;
+  object-fit: cover;
+  display: block;
+}
+
+.contenido {
+  border-top: 1px solid #eeeeee;
+  padding: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contenido p {
+  flex: 1;
+}
+
+.boton {
+  display: block;
+  width: 100%;
+  background-color: var(--turquesa);
+  color: var(--blanco);
+  border: 1px solid var(--turquesa-oscuro);
+  padding: 0.6rem 1em;
+  margin-top: 0.6rem;
+  text-align: center;
+  text-decoration: none;
+}
+
+.boton:hover {
+  background-color: var(--turquesa-oscuro);
+  color: var(--blanco);
+}
+
+.volver {
+  text-align: center;
+  margin-top: 1.25rem;
+}
+
+.volver .boton {
+  width: auto;
+  display: inline-block;
+  padding: 0.6rem 1.5rem;
+}
+
+/* Galería de fotos de cada elemento (Flexbox) */
+
+.galeria-fotos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin: 1.25rem 0;
+}
+
+.galeria-fotos figure {
+  background-color: var(--blanco);
+  border: 1px solid #dddddd;
+  padding: 0.75rem;
+  margin: 0;
+  width: 100%;
+  max-width: 19rem;
+  text-align: center;
+}
+
+.galeria-fotos img {
+  width: 100%;
+  display: block;
+}
+
+.galeria-fotos figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  color: var(--marron);
+}
+
+.descripcion {
+  max-width: 40rem;
+  margin: 0 auto 1.25rem;
+  border: 1px solid #dddddd;
+  padding: 1rem;
+  background-color: var(--blanco);
+}
+
+/* Responsive: tablets */
+@media (max-width: 48rem) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  main {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .grilla-rincones {
+    grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  }
+}
+
+/* Responsive: celulares */
+@media (max-width: 30rem) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+  }
+
+  header {
+    padding: 1.1rem 0.75rem;
+  }
+
+  header h1 {
+    font-size: 1.25rem;
+  }
+
+  .grilla-rincones {
+    grid-template-columns: 1fr;
+  }
+
+  .presentacion .texto,
+  .descripcion {
+    padding: 0.85rem;
+  }
+}
